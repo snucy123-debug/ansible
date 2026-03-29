@@ -1,5 +1,5 @@
 - name: ping the server
-  hosts: web
+  hosts: frontend
   tasks: # give any task 
-  - name: ping the server
-    ansible.builtin.ping:
+  - name: ping the server 
+    ansible.builtin.ping: # it is the command line for to check ping which is builtin.
