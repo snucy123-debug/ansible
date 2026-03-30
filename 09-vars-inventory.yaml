@@ -2,6 +2,8 @@
   hosts: local
   connection: local
   tasks:
-  ansible.builtin.debug:
-    msg: "{{ GREETINGS }} ACTUALLY I AM {{K JAYAVARDHAN}} I AM LEARNING {{ COURSE }} , SO I WANT TO FININSH THIS COURSE WITH IN {{ DURATION }}"
+  - name: course information
+    ansible.builtin.debug:
+      msg: "{{ GREETINGS }} ACTUALLY I AM {{ K VARDHAN }} {{ COURSE }} , SO I WANT TO FININSH THIS COURSE WITH IN {{ DURATION }}"
 
+    # so actualli herew variables are not there but it will run because we updated variables in inventory.ini file as [local:vars] module soo it will vars from there and run.
