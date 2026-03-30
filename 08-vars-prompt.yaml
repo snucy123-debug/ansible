@@ -8,9 +8,33 @@
 
   - name: Password
     prompt: please give password
-    private: true
+    private: false
+    
   
   tasks:
   - name: print user name and password
     ansible.builtin.debug:
       msg: "YOUR USER NAME IS {{ Username }} , and your PASSWORD IS {{ Password }}" 
+
+
+#       ---------------------------------------OUTPUT---------------------------------
+
+      
+# 54.196.242.68 | 172.31.25.226 | t2.micro | https://github.com/snucy123-debug/ansible.git
+# [ ec2-user@ip-172-31-25-226 ~/ansible ]$ ansible-playbook -i inventory.ini 08-vars-prompt.yaml
+# please give username:
+# please give password:
+
+# PLAY [print username and passwrod by  promt module] **************************************************************************************************
+
+# TASK [Gathering Facts] *******************************************************************************************************************************
+# ok: [localhost]
+
+# TASK [print user name and password] ******************************************************************************************************************
+# ok: [localhost] => {
+#     "msg": "YOUR USER NAME IS vardhan , and your PASSWORD IS 9014118852@007"
+# }
+
+# PLAY RECAP *******************************************************************************************************************************************
+# localhost                  : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
