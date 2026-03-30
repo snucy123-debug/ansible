@@ -3,5 +3,5 @@
   connection: local # NO NEED OF USER NAME AND PASSWORD IN COMMAND LINE in mobxtream because WE USED LOCAL HOST HERE SO 
   tasks :
    name: print message 
-  ansible.builtin.debug:
+   ansible.builtin.debug:
    msg: " HELLO MY BOY U JUST NEED TO LEVEL UP DAY BY DAY "
