@@ -10,7 +10,25 @@
       ansible.builtin.debug:             #IT  IS PLAY 1 , TASK 2
         msg: "HELLO I AM TASK 2 FROM PLAY 1"
 
-      #----------------------------------------------------------------------------------------------------------
+
+- name: PLAY 2
+  hosts: local
+  connection: local
+  tasks:
+    - name: Hello from play 2 and task 1
+      ansible.builtin.debug:
+        msg: "HELLO I AM TASK 1 FROM PLAY 2"
+
+    - name: Hello from pla2 and task 2 
+      ansible.builtin.debug:
+        msg: "HELLO I AM TASK 2 FROM PLAY 2"
+        
+           
+
+
+      #----------------------------------------------------- IMPPORTANT POINTS -----------------------------------------------------
+
+
 
 #🔥 Execution Flow (VERY IMPORTANT)
 
@@ -33,8 +51,9 @@
 
 # FORMAT:
 
-#play
-#   tasks
-#     task
-#       module
-#         arguments
+# - play -PLAY 1 OR 2 
+#   hosts - local
+#   tasks - tasks:
+#     - task - - name: Hello from play 2 and task 1
+#       module - ansible.builtin.debug:
+#         input -msg: "HELLO I AM TASK 1 FROM PLAY 2"
