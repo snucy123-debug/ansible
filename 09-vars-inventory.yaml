@@ -7,3 +7,9 @@
       msg: "{{ GREETING }} ACTUALLY I AM {{ NAME }} I AM PURSUCING {{ COURSE }} , SO I WANT TO FININSH THIS COURSE WITH IN {{ DURATION }}"
 
     # so actualli herew variables are not there but it will run because we updated variables in inventory.ini file as [local:vars] module soo it will vars from there and run.
+
+# [local:vars]
+# COURSE=VARIABLES
+# NAME=VARDHAN
+# DURATION=1.5HR
+# GREETING="Hello from Inventory"# SO HERE THERE IS DOUBLE CODES BECAUSE THE HAVE SPACES  SO

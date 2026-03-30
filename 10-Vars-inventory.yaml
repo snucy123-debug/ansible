@@ -1,0 +1,7 @@
+- name: vars from inventory into server not local host
+  hosts: Frontend
+  tasks:
+  - name: print given information
+    ansible.builtin.debug:
+      msg: " MY NAME IS{{ NAME }} I AM LEARNING {{ COURSE }} I THINK IT WILL FINISH WITH IN {{ DUIRATION }} THIS TIME "
+      
