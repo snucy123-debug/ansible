@@ -3,7 +3,7 @@
   connection: local
   tasks:                             #IT  IS PLAY 1 , TASK 1
     - name: hello from play 1 task 1
-      ansible.biultin.debug:
+      ansible.builtin.debug:
        msg: "HELLO I AM TASK 1 FROM PLAY 1"
 
     - name: hello from play 1 and task 2 
@@ -25,5 +25,16 @@
 # Task2
 #---------------------------------------------------------------------
 
-# Play	Group of tasks for specific hosts
+# Play	Group of tasks for specific host
+
 # Task	Single action (module execution)
+
+#-------------------------------------------------------------------
+
+# FORMAT:
+
+#play
+#   tasks
+#     task
+#       module
+#         arguments
