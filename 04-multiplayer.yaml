@@ -1,0 +1,30 @@
+- name: PLAY 1
+  hosts: local
+  connections: local
+  tasks:                             #IT  IS PLAY 1 , TASK 1
+  - name: hello from play 1 task 1
+    ansible.biulting.debug:
+     msg: "HELLO I AM TASK 1 FROM PLAY 1"
+
+  - name: hello from play 1 and task 2 
+    ansible.builtin.debug:
+     msg: "HELLO I AM TASK 2 FROM PLAY 1"
+
+     
+      #----------------------------------------------------------------------------------------------------------
+
+#🔥 Execution Flow (VERY IMPORTANT)
+
+# Ansible runs top → bottom
+
+# Step-by-step:
+# ▶️ Run PLAY1
+# Task1
+# Task2
+# ▶️ Then run PLAY2
+# Task1
+# Task2
+#---------------------------------------------------------------------
+
+# Play	Group of tasks for specific hosts
+# Task	Single action (module execution)
