@@ -2,10 +2,10 @@
   hosts: local
   connection: local
   vars_files:
-  - info.yaml 
+  - course.yaml 
   tasks:
   - name: information of course
     ansible.builtin.debug:
       msg: "my name is {{ NAME }} I WILL COMPLPETE MY {{ COURSE }} WITH IN {{ DURATION }}"
 
-      
+     
