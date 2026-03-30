@@ -3,5 +3,4 @@
   tasks:
   - name: print given information
     ansible.builtin.debug:
-      msg: " MY NAME IS{{ NAME }} I AM LEARNING {{ COURSE }} I THINK IT WILL FINISH WITH IN {{ DUIRATION }} THIS TIME "
-      
+      msg: " MY NAME IS{{ NAME }} I AM LEARNING {{ COURSE }} I THINK IT WILL FINISH WITH IN {{ DURATION }} THIS TIME "
