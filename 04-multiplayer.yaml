@@ -1,14 +1,14 @@
 - name: PLAY1
   hosts: local
-  connections: local
+  connection: local
   tasks:                             #IT  IS PLAY 1 , TASK 1
   - name: hello from play 1 task 1
-    ansible.biulting.debug:
-     msg: "HELLO I AM TASK 1 FROM PLAY 1"
+    ansible.biultin.debug:
+      msg: "HELLO I AM TASK 1 FROM PLAY 1"
 
   - name: hello from play 1 and task 2 
     ansible.builtin.debug:             #IT  IS PLAY 1 , TASK 2
-     msg: "HELLO I AM TASK 2 FROM PLAY 1"
+      msg: "HELLO I AM TASK 2 FROM PLAY 1"
 
 
       #----------------------------------------------------------------------------------------------------------
