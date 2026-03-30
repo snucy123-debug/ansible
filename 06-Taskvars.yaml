@@ -3,18 +3,18 @@
   connection: local
   vars:
    COURSE: PYTHON
-   DURATION: DONT KNOW MIGHT BE 40 DAYS
+   DURATION:  WITH IN 40 DAYS
   tasks:
   - name: About spoken english calss
     vars:
      COURSE: ENGLSH
-     DURATION: DONT KNOW MIGHT BE 6 MONTHS
+     DURATION:  WITH IN 6 MONTHS
     ansible.builtin.debug:
-      msg: " i am learning {{ COURSE }}, I think i will finish {{ DURATION }}"
+      msg: " i am learning {{ COURSE }},  I think i will finish  it {{ DURATION }}"
 
   - name: About python
     ansible.builtin.debug:
-      msg: " i am learning {{ COURSE }}, I think i will finish {{ DURATION }}"
-      
+      msg: " i am learning {{ COURSE }}, I think i will finish it {{ DURATION }}"
+
 
   
