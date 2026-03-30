@@ -1,0 +1,11 @@
+- name : PLAY LEVEL VARIABLES
+  hosts: local
+  connection: local
+  vars:
+   COURSE: DEVOPS WITH AWS
+   DURATION: REALLY DONT KNOW HAVE TO COMPLETE IT QUICKLY
+   STUDENT: K.JAYAVARDHAN
+  tasks:
+  ansible.builtin.debug:
+    msg: "i am {{ STUDENT}} , I WANT TO COMPLETE {{ COURSE }} , BUT {{ DURATION }} THANK U "
+       
