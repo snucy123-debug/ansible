@@ -1,0 +1,11 @@
+- name: variable files
+  host: local
+  connection: local
+  vars-files:
+  - info.yaml 
+  tasks:
+  - name: information of course
+    ansible.builtin.debug:
+      msg: "my name is {{ NAME }} I WILL COMPLPETE MY {{ COURSE }} WITH IN {{ DURATION }}"
+
+      
