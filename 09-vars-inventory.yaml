@@ -1,0 +1,7 @@
+- name: vars in inventory
+  hosts: local
+  connection: local
+  tasks:
+  ansible.builtin.debug:
+    msg: "{{ GREETINGS }} ACTUALLY I AM {{K JAYAVARDHAN}} I AM LEARNING {{ COURSE }} , SO I WANT TO FININSH THIS COURSE WITH IN {{ DURATION }}"
+
