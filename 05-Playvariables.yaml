@@ -6,6 +6,6 @@
    DURATION: REALLY DONT KNOW HAVE TO COMPLETE IT QUICKLY
    STUDENT: K.JAYAVARDHAN
   tasks:
-  - name : Print it
-  ansible.builtin.debug:
-    msg: "i am {{ STUDENT}} , I WANT TO COMPLETE {{ COURSE }} , BUT {{ DURATION }} THANK U "
+  - name: Print it
+    ansible.builtin.debug:
+      msg: "i am {{ STUDENT}} , I WANT TO COMPLETE {{ COURSE }} , BUT {{ DURATION }} THANK U "
