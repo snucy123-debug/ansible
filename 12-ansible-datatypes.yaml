@@ -9,10 +9,9 @@
    - LINUX
    - GIT
    - SHELL
-
-  CONCEPTS: #MAP,DICTONARY OR OBJECT
-   CI: JENKINS
-   SCRIPTINGS: "Shell, Ansible, Terraform, Python"
+   CONCEPTS: #MAP,DICTONARY OR OBJECT
+    CI: JENKINS
+    SCRIPTINGS: "Shell, Ansible, Terraform, Python"
   tasks:
   - name: print this information
     ansible.builtin.debug:
