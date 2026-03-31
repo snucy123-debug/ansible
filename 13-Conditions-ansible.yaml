@@ -1,0 +1,16 @@
+- name: ANSIBLE CONDITIONS
+  hosts: local
+  connection: local
+  vars:
+   NUMBER: 65
+  tasks:
+  - name: show calculation 
+    when: NUMBER < 100 # CONNDITION
+    ansible.builtin.debug:
+      msg: " GIVEN  NUMBER {{ NUMBER }} IS LESSTHAN HUNDRED "
+
+  - name: show calculation
+    when: NUMBER > 100 #CONDITION
+    ansible.builtin.debug:
+      msg: " GIVEN  NUMBER {{ NUMBER }} IS GREATERTHAN HUNDRED "
+
