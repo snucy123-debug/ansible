@@ -15,4 +15,4 @@
   tasks:
   - name: print this information
     ansible.builtin.debug:
-      msg: "my name is {{ NAME }} , I AM LEARNING {{ CONCEPTS }} WITH THE HELP OF {{ TOOLS }} THESE TOOLS , I THINK I WILL COMPLETE IT IN {{ DURATION }} , AND ITS IS {{ IS-LIVE }} "
+      msg: "my name is {{ NAME }} , I AM LEARNING {{ CONCEPTS }} WITH THE HELP OF {{ TOOLS }} THESE TOOLS , I THINK I WILL COMPLETE IT IN {{ DURATION }} , AND IT IS {{ IS-LIVE }} "
