@@ -1,0 +1,19 @@
+- name: ansible datatypes
+  hosts: local
+  connection: local
+  vars:
+   NAME: JAYA #STRING
+   DURATION: 9HOURS #NUMBER
+   IS_LIVE: true #BOOLEAN
+   TOOLS: #LIST
+   - LINUX
+   - GIT
+   - SHELL
+
+  CONCEPTS: #MAP,DICTONARY OR OBJECT
+   CI: JENKINS
+   SCRIPTINGS: "Shell, Ansible, Terraform, Python"
+  tasks:
+  - name: print this information
+    ansible.builtin.debug:
+      msg: "my name is {{ NAME }} , I AM LEARNING {{ CONCEPTS }} WITH THE HELP OF {{ TOOLS }} THESE TOOLS , I THINK I WILL COMPLETE IT IN {{ DURATION }} , AND ITS IS {{ IS-LIVE }} "
