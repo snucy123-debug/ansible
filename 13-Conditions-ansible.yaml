@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-   NUMBER: 65
+   NUMBER: 5486441
   tasks:
   - name: show calculation 
     when: NUMBER < 100 # CONNDITION
