@@ -5,4 +5,32 @@
   - name: show course info
     ansible.builtin.debug:
       msg: "so my name is {{ NAME }} , I am learning {{ COURSE }} I WILL COMPLETE IT WITH IN {{ DURATION }}"
+
+
+#       #------------------------------------------OUTPUT---------------------------------
+
       
+# 54.196.242.68 | 172.31.25.226 | t2.micro | https://github.com/snucy123-debug/ansible.git
+# [ ec2-user@ip-172-31-25-226 ~/ansible ]$ ansible-playbook -i inventory.ini -e " NAME=VARDHAN COURSE=ARGUMEMNTS DURATION=2HOURS " 11-vars-arguments.yaml
+
+# PLAY [variables from arguments] **********************************************************************************************************************
+
+# TASK [Gathering Facts] *******************************************************************************************************************************
+# ok: [localhost]
+
+# TASK [show course info] ******************************************************************************************************************************
+# ok: [localhost] => {
+#     "msg": "so my name is VARDHAN , I am learning ARGUMEMNTS I WILL COMPLETE IT WITH IN 2HOURS"
+# }
+
+# PLAY RECAP *******************************************************************************************************************************************
+# localhost                  : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
+
+
+
+# -----------------------------------------------------------------------------------------------
+# ►SO WILL USE THIS COMMAND ARGUMENTS TO GET RESULT WITH ARGUMENTS 
+# ►SO BELOW "-e" is meant by extra variables
+
+#  ansible-playbook -i inventory.ini -e " NAME=VARDHAN COURSE=ARGUMEMNTS DURATION=2HOURS " 11-vars-arguments.yaml
