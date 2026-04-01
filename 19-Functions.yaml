@@ -20,8 +20,20 @@
 # ►SO IT JUST FIRST CHECKS THE VARIABLE AND THEM PROCEED TO USE DEFAULT VARIABLE
 # ---------------------------------------------------------------
 
-#► 2 [SPLIT]
+#► 2 [SPLIT] convert string into lists
   - name: print names 
     ansible.builtin.debug:
       msg: " HI {{ persons | split (',') }} "
 
+# -----------------------output--------------------
+# TASK [print names] 
+# ok: [localhost] => {
+#     "msg": " HI ['virat', 'ronaldo', 'speed', 'andrewtate', 'randyorton'] "
+# -------------------------------------------------
+
+#► TO GET NAMES ONE BY ONE BY USING LOOP
+
+  - name: print one by one
+    ansible.builtin.debug:
+      msg: " HI {{ item }} "
+    loop: "{{ persons | split (',') }}"
