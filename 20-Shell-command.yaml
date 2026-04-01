@@ -2,7 +2,7 @@
   hosts: Frontend
   tasks:
   - name: create ls -lt
-    ansible.builtin.shell: " ls -ltr > /tmp/output.txt"
+    ansible.builtin.shell: " ls -ltr > /tmp/output.txt" #shell module  in complex times we uise this when we need >,|,&& etc
     register: command_result 
 
   - name: print the result
@@ -10,3 +10,13 @@
       msg: " {{ command_result }} "
 
 
+- name: redirection using shell module
+  hosts: Frontend
+  tasks:
+  - name: create ls -lt
+    ansible.builtin.command : ls -ltr  #command module easy to use mostly uses this
+    register: command_result 
+    
+  - name: print the result
+    ansible.builtin.debug:
+      msg: " {{ command_result }} "
