@@ -101,3 +101,17 @@
       name: "K JAYAVARDHAN"
     ansible.builtin.debug:
       msg: "Hello {{ name | lower }}" 
+
+      # -------------------OUTPUT--------------------
+      # "msg": "Hello JAYAVARDHAN KUNDARATHI"
+
+      #  "msg": "Hello k jayavardhan"
+#► 
+  - name: check IP address is valid or not
+    vars:
+      ip: "192.168.1.1 .09"
+    ansible.builtin.debug:
+      msg: "{{ ip | ansible.utils.ipaddr }}" # ansible.utils.ipaddr == FUNCTION 
+      
+
+
