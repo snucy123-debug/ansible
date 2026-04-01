@@ -4,9 +4,34 @@
   tasks:
   - name: PRINT GIVEN INFO
     ansible.builtin.debug:
-      msg: "{{ item }}IS MY INSPIRATION" # HERE {ITEM} IS RESERVED/BUILTIN KEYWORD FOR LOOPS OR built-in loop variable
+      msg: "{{ item }}  IS INSPIRATION" # HERE {ITEM} IS RESERVED/BUILTIN KEYWORD FOR LOOPS OR built-in loop variable
     loop:
     - VIRATKOHLI
     - PURI
     - RONALDO
     - VXLIFTS
+
+#     ------------------------------8OUTPUT-----------------------------
+#RROR HANDLED : USED LOOPS: INSTEAD LOOP:  SO GOT ERROR
+    
+# PLAY [LOOPS] **************************************************************************************************************************************************************************
+
+# TASK [Gathering Facts] ****************************************************************************************************************************************************************
+# ok: [localhost]
+
+# TASK [PRINT GIVEN INFO] ***************************************************************************************************************************************************************
+# ok: [localhost] => (item=VIRATKOHLI) => {
+#     "msg": "VIRATKOHLIIS MY INSPIRATION"
+# }
+# ok: [localhost] => (item=PURI) => {
+#     "msg": "PURIIS MY INSPIRATION"
+# }
+# ok: [localhost] => (item=RONALDO) => {
+#     "msg": "RONALDOIS MY INSPIRATION"
+# }
+# ok: [localhost] => (item=VXLIFTS) => {
+#     "msg": "VXLIFTSIS MY INSPIRATION"
+# }
+
+# PLAY RECAP ****************************************************************************************************************************************************************************
+# localhost                  : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0

@@ -8,7 +8,7 @@
 
 
 #       #------------------------------------------OUTPUT---------------------------------
-
+#RROR HANDLED : USED LOOPS: INSTEAD LOOP:  SO GOT ERROR
       
 # 54.196.242.68 | 172.31.25.226 | t2.micro | https://github.com/snucy123-debug/ansible.git
 # [ ec2-user@ip-172-31-25-226 ~/ansible ]$ ansible-playbook -i inventory.ini -e " NAME=VARDHAN COURSE=ARGUMEMNTS DURATION=2HOURS " 11-vars-arguments.yaml

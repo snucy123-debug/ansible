@@ -1,0 +1,12 @@
+- name: INSTALL MULTIPLE  PACKAGES BY USING LOOPS
+  hosts: Frontend
+  become: yes
+  tasks:
+  - name: INSTALL 3 PACKAGES 
+    ansible.builting.package:
+     name: "{{ item }}"
+     state: present
+    loop:
+     - nginx
+     - my sql
+     - zip
