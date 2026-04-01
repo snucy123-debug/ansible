@@ -3,7 +3,7 @@
   become: yes
   tasks:
   - name: installing and removing the packages
-    ansibile.builtin.package:
+    ansible.builtin.package:
       name: "{{ item.name }}"
       state: "{{ item.state }}"
 
