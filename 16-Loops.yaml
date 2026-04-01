@@ -4,8 +4,8 @@
   tasks:
   - name: PRINT GIVEN INFO
     ansible.builtin.debug:
-      msg: "{{ item }}IS MY INSPIRATION" # HERE {ITEM} IS RESERVED/BUILTIN KEYWORD FOR LOOPS
-    loops:
+      msg: "{{ item }}IS MY INSPIRATION" # HERE {ITEM} IS RESERVED/BUILTIN KEYWORD FOR LOOPS OR built-in loop variable
+    loop:
     - VIRATKOHLI
     - PURI
     - RONALDO
