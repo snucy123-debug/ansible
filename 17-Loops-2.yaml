@@ -3,7 +3,7 @@
   become: yes
   tasks:
   - name: INSTALL 3 PACKAGES 
-    ansible.builting.package:
+    ansible.builtin.package:
      name: "{{ item }}"
      state: present
     loop:
