@@ -1,0 +1,18 @@
+- name: LOOPS
+  hosts: local
+  connection: local
+  tasks:
+  - name: print given information
+    ansible.builtin.debug:
+      msg: "HE IS MY INSPIRATION {{ item }}"
+    loops:
+    - VIRATKOHLI
+    - PURI
+    - RONALDO
+    - VXLIFTS
+    
+    
+
+
+
+     
