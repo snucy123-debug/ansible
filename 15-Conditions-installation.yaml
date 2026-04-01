@@ -1,0 +1,17 @@
+- name: Install nginx by using conditions
+  hosts: Frontend
+  become: yes
+  tasks:
+  - name: install nginx if its redhat
+    ansible.builtin.dnf:
+      name: nginx
+      state: present
+    when: anisible_os_family == "RedHat"
+
+  - name: install nginx if its Debian
+    ansible.builtin.apt:
+      name: nginx
+      state: present
+    when: anisible_os_family == "Debian
+
+
