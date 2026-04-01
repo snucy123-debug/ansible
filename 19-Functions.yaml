@@ -23,5 +23,5 @@
 #► 2 [SPLIT]
 - name: print names 
   ansible.builtin.debug:
-    msg: " HI {{ persons | split (',') }}"
+    msg: " HI {{ persons | split (',') }} "
 
