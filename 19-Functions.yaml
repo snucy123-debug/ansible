@@ -76,3 +76,28 @@
       - {'key': 'student', 'value': 'vardhan'}
     ansible.builtin.debug:
       msg: "Course Info: {{ course | items2dict  }}"
+
+# ---------------------------output---------------------------
+
+# TASK [convert map into list] 
+# ok: [localhost] => {
+#     "msg": "Course Info: [{'key': 'name', 'value': 'ansible'}, {'key': 'duration', 'value': '10HR'}, {'key': 'student', 'value': 'vardhan'}]"
+# }
+
+# TASK [convert list into map] 
+# ok: [localhost] => {
+#     "msg": "Course Info: {'name': 'ansible', 'duration': '10HR', 'student': 'vardhan'}"
+# ----------------------------------------------------------------------------------------
+
+#► UPPER AND LOWER CASE 
+  - name: convert to uppercase
+    vars:
+      name: "Jayavardhan KundaRaThi"
+    ansible.builtin.debug:
+      msg: "Hello {{ name | upper }}"
+
+  - name: convert to lowercase
+    vars:
+      name: "K JAYAVARDHAN"
+    ansible.builtin.debug:
+      msg: "Hello {{ name | lower }}" 
