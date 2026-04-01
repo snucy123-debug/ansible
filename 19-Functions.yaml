@@ -37,3 +37,42 @@
     ansible.builtin.debug:
       msg: " HI {{ item }} "
     loop: "{{ persons | split (',') }}"
+
+# -------------------------------OUTPUT----------------------
+    
+# TASK [print one by one] 
+# ok: [localhost] => (item=virat) => {
+#     "msg": " HI virat "
+# }
+# ok: [localhost] => (item=ronaldo) => {
+#     "msg": " HI ronaldo "
+# }
+# ok: [localhost] => (item=speed) => {
+#     "msg": " HI speed "
+# }
+# ok: [localhost] => (item=andrewtate) => {
+#     "msg": " HI andrewtate "
+# }
+# ok: [localhost] => (item=randyorton) => {
+#     "msg": " HI randyorton "
+# }
+
+# ------------------------------------------------------------------
+#► DICT TO LIST
+ - name: convert map into list
+    vars:
+      course:
+        name: ansible
+        duration: 10HR
+        student: vardhan
+    ansible.builtin.debug:
+      msg: "Course Info: {{ course | dict2items  }}"
+#► LIST TO DICT 
+  - name: convert list into map
+    vars:
+      course:
+      - {'key': 'name', 'value': 'ansible'}
+      - {'key': 'duration', 'value': '10HR'}
+      - {'key': 'student', 'value': 'vardhan'}
+    ansible.builtin.debug:
+      msg: "Course Info: {{ course | items2dict  }}"
