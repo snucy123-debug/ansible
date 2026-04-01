@@ -1,0 +1,7 @@
+- name: redirection using shell module
+  hosts: Frontend
+  tasks:
+  - name: create ls -lt
+    ansible.builtin.shell: " ls -ltr > /tmp/output.txt"
+    register: command_result 
+    
