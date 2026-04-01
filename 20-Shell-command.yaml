@@ -6,7 +6,7 @@
     register: command_result 
 
   - name: print the result
-  - debug:
-    msg: " {{ command_result }} "
-   
-    
+    ansible.builtin.debug:
+      msg: " {{ command_result }} "
+
+
