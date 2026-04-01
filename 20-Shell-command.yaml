@@ -4,4 +4,9 @@
   - name: create ls -lt
     ansible.builtin.shell: " ls -ltr > /tmp/output.txt"
     register: command_result 
+
+  - name: print the result
+  - debug:
+    msg: " {{ command_result }} "
+   
     
