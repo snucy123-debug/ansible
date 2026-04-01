@@ -1,8 +1,27 @@
+#► 1 [DEFAULT]
 - name: Functions
   hosts: local
   connection: local
+  vars:
+    persons: "virat,ronaldo,speed,andrewtate,randyorton"
   tasks:
   - name: checking undefined names/variables
     ansible.builtin.debug:
-      msg: " HI AM {{ person | default ('vardhan') }} "
-      
+      msg: " HI AM {{ person | default ('vardhan') }} " # defauls is a function
+# ------------------------------------OUTPUT--------------------------------
+# ►IN ANSIBLE
+#   FUNCTIONS == FILTERS 
+# TASK [checking undefined names/variables] *****************************************************************************
+# ok: [localhost] => {
+#     "msg": " HI AM vardhan "
+# }
+#---------------------------------------------------------------------------------
+# ►SEE FOR ABOVE THIS WE NEVER DEFINED ANY VARIABLE AS PERSON BUT WE GIVEN VARIABLE AS PERSON SO  WE HAVE GIVEN  DEFAULT VALUE TO THAT VARIABLE TO THAT AS VARDHAN.
+# ►SO IT JUST FIRST CHECKS THE VARIABLE AND THEM PROCEED TO USE DEFAULT VARIABLE
+# ---------------------------------------------------------------
+
+#► 2 [SPLIT]
+- name: print names:
+  ansible.builtin.debug:
+    msg: " HI {{ persons | split (',') }}"
+    
