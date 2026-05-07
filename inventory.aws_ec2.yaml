@@ -21,3 +21,27 @@ compose:
 #----------------------------------------------------------------------------------------------------
 
  # soo for this name should be     [.aws_ec2.yaml ]
+
+# ►OUTPUT
+# @all:
+#   |--@ungrouped:
+#   |--@aws_ec2:
+#   |  |--172.31.19.192
+#   |  |--172.31.28.113
+#   |  |--172.31.18.240
+#   |  |--172.31.28.82
+#   |  |--172.31.27.104
+#   |--@dynamic_frontend:
+#   |  |--172.31.19.192
+#   |  |--172.31.28.113
+#   |  |--172.31.18.240
+#   |  |--172.31.28.82
+#   |  |--172.31.27.104
+
+
+# ♦♦♦IMPORTANT THINGS BTO DO :
+# •AWS CONFIGURE 
+# •COMMAND LINE :ansible-inventory -i inventory.aws_ec2.yaml --graph
+# •NEED TO INSTALL BOTO3 AND BOTO CORE 
+
+
