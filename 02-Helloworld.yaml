@@ -5,13 +5,17 @@
    - name: print message 
      ansible.builtin.debug:
       msg: "Be a man dude"
-
-
-
-
-
-
+    
+   - name: print this
+     ansible.builtin.debug:
+      msg: "Be confident"
       
+
+
+
+
+
+#ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 02-Helloworld.yaml
 # PLAY [hello world] ********************************************************************************************************************************************************************
 
 # TASK [Gathering Facts] ****************************************************************************************************************************************************************
